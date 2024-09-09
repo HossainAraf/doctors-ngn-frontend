@@ -3,9 +3,15 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
+    <Router>
+      <div className="container">
+        <div className="App">
+          <Routes>
+            <Route path="/" />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
