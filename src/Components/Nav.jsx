@@ -18,7 +18,7 @@ function Nav() {
         <div className="h-auto">
           <img src={logo} alt="logo" className="h-6 max-w-full rounded-lg" />
         </div>
-        {/* <h1>Find your Doctors/Medical services from Naogaon</h1> */}
+        <h1 className="mx-5 text-center">Find your Doctors/Medical services from Naogaon</h1>
         {/* HAMBURGER MENU */}
         <div>
           <button onClick={toggleMenu} type="button" className="text-white focus:outline-none">
