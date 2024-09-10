@@ -1,5 +1,6 @@
 // IMPORTS
 import { useState } from 'react';
+import logo from '../Assets/Img/logo.png';
 
 // COMPONENT
 function Nav() {
@@ -11,9 +12,10 @@ function Nav() {
 
   // RETURN USING TAILWIND CLASSES
   return (
-    <nav className="bg-blue-600 p-4">
+    <nav className="bg-zinc-950 p-4">
       <div className="container mx-auto flex justify-between items-center">
         {/* LOGO */}
+
         {/* <h1>Find your Doctors/Medical services from Naogaon</h1> */}
         {/* HAMBURGER MENU */}
         <div>
