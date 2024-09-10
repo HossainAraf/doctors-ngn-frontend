@@ -15,7 +15,9 @@ function Nav() {
     <nav className="bg-zinc-950 p-4">
       <div className="container mx-auto flex justify-between items-center">
         {/* LOGO */}
-
+        <div className="h-auto">
+          <img src={logo} alt="logo" className="h-6 max-w-full rounded-lg" />
+        </div>
         {/* <h1>Find your Doctors/Medical services from Naogaon</h1> */}
         {/* HAMBURGER MENU */}
         <div>
