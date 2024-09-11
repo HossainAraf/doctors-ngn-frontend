@@ -1,9 +1,11 @@
+// IMPORT
+import React, { useState } from 'react';
+
 // COMPONENT
-const Home = () => (
-  <div>
-    <h1 className="bg-blue">Home</h1>
-  </div>
-);
+const Home = () => {
+  const [ specifications, setSpecifications] = useState([]);
+  const [ error, setError] = useState(null);
+};
 
 // EXPORT
 export default Home;
