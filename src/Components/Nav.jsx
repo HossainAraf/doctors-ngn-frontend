@@ -3,7 +3,7 @@ import { useState } from 'react';
 import logo from '../Assets/Img/logo.png';
 
 // COMPONENT
-function Nav() {
+const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -77,7 +77,7 @@ function Nav() {
       </div>
     </nav>
   );
-}
+};
 
 // EXPORT
 export default Nav;
