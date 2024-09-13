@@ -15,23 +15,25 @@ const DoctorList = ({ specificationId }) => {
         setDoctors(response.data);
       } catch (error) {
         console.error('Error fetching doctors:', error);
-      }  
-      };
-      
-      fetchDoctors();
-    }, [specificationId]);
+      }
+    };
 
-    return (
-      <div>
-        <h2>Doctors List for: {specificationId}</h2>
-        <ul>
-          {doctors.map((doctor) => (
-            <li key={doctor.id}>{doctor.name}</li>
-          ))}
-        </ul>
-      </div>
-    )
+    fetchDoctors();
+  }, [specificationId]);
 
+  return (
+    <div>
+      <h2>
+        Doctors List for:
+        {specificationId}
+      </h2>
+      <ul>
+        {doctors.map((doctor) => (
+          <li key={doctor.id}>{doctor.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 // EXPORTS
