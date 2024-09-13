@@ -21,4 +21,18 @@ const DoctorList = ({ specificationId }) => {
       fetchDoctors();
     }, [specificationId]);
 
+    return (
+      <div>
+        <h2>Doctors List for: {specificationId}</h2>
+        <ul>
+          {doctors.map((doctor) => (
+            <li key={doctor.id}>{doctor.name}</li>
+          ))}
+        </ul>
+      </div>
+    )
+
 };
+
+// EXPORTS
+export default DoctorList;
