@@ -1,9 +1,10 @@
 // IMPORTS
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { useParams } from 'react-router-dom';
 
 // DEFINE THE COMPONENT
-const DoctorList = ({ specificationId }) => {
+const DoctorList = () => {
+  const { specificationId } = useParams();
   // STATE
   const [doctors, setDoctors] = useState([]);
   // const [error, setError] = useState([]);
@@ -35,11 +36,6 @@ const DoctorList = ({ specificationId }) => {
       </ul>
     </div>
   );
-};
-
-// PROP VALIDATION
-DoctorList.propTypes = {
-  specificationId: PropTypes.string.isRequired,
 };
 
 // EXPORTS
