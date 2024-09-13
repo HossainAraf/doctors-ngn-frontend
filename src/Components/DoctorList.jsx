@@ -14,7 +14,21 @@ const DoctorList = () => {
     const fetchDoctors = async () => {
       try {
         const response = await fetch(`http://localhost:3000/specifications/${specificationId}/doctors`);
-        setDoctors(response.data);
+
+        if (!response.ok) {
+          // eslint-disable-next-line no-template-curly-in-string
+          throw new Error('Error: ${response.status} - ${response.statusText');
+        }
+
+        const data = await response.json();
+        console.dir(data); // log full response
+
+        // CONVERT SINGLE OBJECT TO AN ARRAY
+        if (Array.isArray(data)) {
+          setDoctors(data);
+        } else {
+          setDoctors([]); // Wrap the single object to an array
+        }
       } catch (error) {
         console.error('Error fetching doctors:', error);
       }
