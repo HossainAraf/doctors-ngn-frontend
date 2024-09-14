@@ -1,5 +1,6 @@
 // IMPORT
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 // API URL
 const apiUrl = 'http://localhost:3000/api/v1/specifications';
@@ -34,8 +35,12 @@ const Home = () => {
       <h1>Home</h1>
       {data.map((item) => (
         <div key={item.id}>
-          <h2>{item.name}</h2>
-          <p>{item.description}</p>
+          <Link to={`/doctors/${item.id}`}>
+            <button type="button">
+              View Doctors for:
+              {item.name}
+            </button>
+          </Link>
         </div>
       ))}
     </div>

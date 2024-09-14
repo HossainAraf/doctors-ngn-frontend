@@ -32,7 +32,7 @@ const DoctorList = () => {
     };
 
     fetchDoctors();
-  }, [specificationId]);
+  }, [specificationId]); // Refresh the list when the specificationId changes
 
   // Add log to ensure data is set
   console.log('Doctors:', doctors);
