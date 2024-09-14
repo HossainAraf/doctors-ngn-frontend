@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from './Components/Nav';
 import Home from './Components/Home/Home';
+import DoctorList from './Components/DoctorList';
 import './App.css';
 
 const App = () => (
@@ -12,7 +13,7 @@ const App = () => (
           <Route path="/" element={<Home />} />
           <Route path="/ambulance" />
           <Route path="/emergency" />
-          <Route path="/doctors" />
+          <Route path="/doctors/:specificationId" element={<DoctorList />} />
           <Route path="/clinics" />
           <Route path="/hospitals" />
           <Route path="/pharmacy" />
