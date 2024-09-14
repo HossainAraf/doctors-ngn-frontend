@@ -5,7 +5,6 @@ const DoctorList = () => {
   const { specificationId } = useParams(); // Get the specification ID from the URL
   const [doctors, setDoctors] = useState([]);
 
-  // Add log to verify rendering
   console.log(`Rendering DoctorList for specificationId: ${specificationId}`);
 
   useEffect(() => {
@@ -13,7 +12,7 @@ const DoctorList = () => {
       try {
         console.log(`Fetching doctors for specificationId: ${specificationId}`);
 
-        const response = await fetch(`http://localhost:3000/api/v1/doctors/${specificationId}`);
+        const response = await fetch(`http://localhost:3000/api/v1/specifications/${specificationId}/doctors`);
         if (!response.ok) {
           throw new Error(`Error: ${response.status} - ${response.statusText}`);
         }
