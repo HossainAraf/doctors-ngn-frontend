@@ -14,11 +14,13 @@ const DoctorSlider = ({ specifications }) => {
   };
 
   return (
+    // eslint-disable-next-line react/jsx-props-no-spreading
     <Slider {...settings}>
       {specifications.slice(0, 3).map((spec) => (
         <div key={spec.id}>
+          {/* <img src={emdad} alt="doctor" /> */}
           <h3>
-            Name: Dr.
+            AAA:
             {spec.name}
           </h3>
           <p>
@@ -29,6 +31,17 @@ const DoctorSlider = ({ specifications }) => {
       ))}
     </Slider>
   );
+};
+
+// PROP VALIDATION FOR specification.slice
+DoctorSlider.propTypes = {
+  specifications: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default DoctorSlider;
