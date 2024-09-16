@@ -1,5 +1,6 @@
 // IMPORT
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { fetchSpecifications } from '../../Services/apiService';
 
 // COMPONENT
@@ -22,9 +23,11 @@ const Home = () => {
       {specifications.length > 0 ? (
         <div>
           {specifications.map((spec) => (
-            <button key={spec.id} type="button">
-              {spec.name}
-            </button>
+            <Link key={spec.id} to={`/doctors/${spec.id}`}>
+              <button type="button">
+                {spec.name}
+              </button>
+            </Link>
           ))}
         </div>
       ) : (
