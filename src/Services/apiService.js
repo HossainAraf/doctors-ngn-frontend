@@ -8,7 +8,7 @@ const fetchSpecifications = async () => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error('Error fetching specifications:', error);
+    // console.error('Error fetching specifications:', error);
     return [];
   }
 };
@@ -28,7 +28,7 @@ const fetchDoctorsBySpecificationId = async (specificationId) => {
 
     return await response.json();
   } catch (error) {
-    console.error('Error fetching doctors:', error);
+    // console.error('Error fetching doctors:', error);
     return [];
   }
 };

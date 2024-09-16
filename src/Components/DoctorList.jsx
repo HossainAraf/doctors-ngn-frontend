@@ -6,7 +6,7 @@ const DoctorList = () => {
   const { specificationId } = useParams(); // Get the specification ID from the URL
   const [doctors, setDoctors] = useState([]);
 
-  console.log(`Rendering DoctorList for specificationId: ${specificationId}`);
+  // console.log(`Rendering DoctorList for specificationId: ${specificationId}`);
 
   useEffect(() => {
     const loadDoctors = async () => {
@@ -24,7 +24,7 @@ const DoctorList = () => {
   }, [specificationId]); // Refresh the list when the specificationId changes
 
   // Add log to ensure data is set
-  console.log('Doctors:', doctors);
+  // console.log('Doctors:', doctors);
 
   return (
     <div>
