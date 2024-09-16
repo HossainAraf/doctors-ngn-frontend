@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchSpecifications } from '../../Services/apiService';
 import Button from '../Button';
+import DoctorSlider from './Slider';
 
 // COMPONENT
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
   return (
     <div>
       <h1>Home</h1>
+      <DoctorSlider specifications={specifications} />
       {specifications.length > 0 ? (
         <div>
           {specifications.map((spec) => (
