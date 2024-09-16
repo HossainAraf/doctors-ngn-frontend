@@ -1,41 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { fetchDoctorsBySpecificationId } from '../Services/apiService';
 
 const DoctorList = () => {
   const { specificationId } = useParams(); // Get the specification ID from the URL
   const [doctors, setDoctors] = useState([]);
 
-  console.log(`Rendering DoctorList for specificationId: ${specificationId}`);
+  // console.log(`Rendering DoctorList for specificationId: ${specificationId}`);
 
   useEffect(() => {
-    const fetchDoctors = async () => {
-      try {
-        console.log(`Fetching doctors for specificationId: ${specificationId}`);
-
-        const response = await fetch(`http://localhost:3000/api/v1/specifications/${specificationId}/doctors`);
-        if (!response.ok) {
-          throw new Error(`Error: ${response.status} - ${response.statusText}`);
-        }
-
-        const data = await response.json();
-        console.dir(data); // Log the full response
-
-        // Convert single object to array if necessary
-        if (Array.isArray(data)) {
-          setDoctors(data); // Set doctors if the response is already an array
-        } else {
-          setDoctors([data]); // Wrap the single object in an array
-        }
-      } catch (error) {
-        console.error('Error fetching doctors:', error);
-      }
+    const loadDoctors = async () => {
+      const data = await fetchDoctorsBySpecificationId(specificationId);
+      setDoctors(data);
     };
+    //     // Convert single object to array if necessary
+    //     if (Array.isArray(data)) {
+    //       setDoctors(data); // Set doctors if the response is already an array
+    //     } else {
+    //       setDoctors([data]); // Wrap the single object in an array
+    //     }
 
-    fetchDoctors();
+    loadDoctors();
   }, [specificationId]); // Refresh the list when the specificationId changes
 
   // Add log to ensure data is set
-  console.log('Doctors:', doctors);
+  // console.log('Doctors:', doctors);
 
   return (
     <div>

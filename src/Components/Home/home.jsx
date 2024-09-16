@@ -1,48 +1,37 @@
 // IMPORT
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
-// API URL
-const apiUrl = 'http://localhost:3000/api/v1/specifications';
+import { fetchSpecifications } from '../../Services/apiService';
+import Button from '../Button';
 
 // COMPONENT
 const Home = () => {
-  const [data, setData] = useState([]);
-  // const [error, setError] = useState(null);
+  const [specifications, setSpecifications] = useState([]);
 
-  //  FETCH DATA FROM API using useEffect async await
-  useEffect(
-    () => {
-      const fetchData = async () => {
-        try {
-          const response = await fetch(apiUrl);
-          console.log('Response:', response);
-          const data = await response.json();
-          setData(data);
-          console.log(data);
-        } catch (error) {
-          // setError(error);
-        }
-      };
-      fetchData();
-    },
-    [],
-  );
+  // FETCH DATA using useEffect async await
+  useEffect(() => {
+    const loadSpecifications = async () => {
+      const data = await fetchSpecifications();
+      setSpecifications(data);
+    };
+    loadSpecifications(); // Call the function
+  }, []); // Empty array to run only once
 
   // RETURN
   return (
     <div>
       <h1>Home</h1>
-      {data.map((item) => (
-        <div key={item.id}>
-          <Link to={`/doctors/${item.id}`}>
-            <button type="button">
-              View Doctors for:
-              {item.name}
-            </button>
-          </Link>
+      {specifications.length > 0 ? (
+        <div>
+          {specifications.map((spec) => (
+            <Link key={spec.id} to={`/doctors/${spec.id}`}>
+              <Button label={spec.name} className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" />
+            </Link>
+          ))}
         </div>
-      ))}
+      ) : (
+        <p>Loading specifications...</p>
+      )}
     </div>
   );
 };
