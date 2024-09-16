@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchSpecifications } from '../../Services/apiService';
+import Button from '../Button';
 
 // COMPONENT
 const Home = () => {
@@ -24,9 +25,7 @@ const Home = () => {
         <div>
           {specifications.map((spec) => (
             <Link key={spec.id} to={`/doctors/${spec.id}`}>
-              <button type="button">
-                {spec.name}
-              </button>
+              <Button label={spec.name} className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" />
             </Link>
           ))}
         </div>
