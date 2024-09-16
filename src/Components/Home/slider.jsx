@@ -11,6 +11,10 @@ const DoctorSlider = ({ specifications }) => {
     speed: 10,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoPlay: true,
+    autoplaySpeed: 2000,
+    cssEase: 'linear',
+    pauseOnHover: true,
   };
 
   return (
@@ -20,7 +24,7 @@ const DoctorSlider = ({ specifications }) => {
         <div key={spec.id}>
           {/* <img src={emdad} alt="doctor" /> */}
           <h3>
-            AAA:
+            Name: Dr.
             {spec.name}
           </h3>
           <p>
