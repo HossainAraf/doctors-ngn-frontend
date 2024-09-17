@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import AnimatedText from './AnimatedText';
 import '../../Styles/nav.css';
-import logo from '../../Assets/Img/logo.png';
 
 // COMPONENT
 function Nav() {
@@ -16,10 +15,6 @@ function Nav() {
   return (
     <nav className="bg-zinc-950 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        {/* LOGO */}
-        <div className="h-auto">
-          <img src={logo} alt="logo" className="h-6 max-w-full rounded-lg" />
-        </div>
         <AnimatedText />
         {/* HAMBURGER MENU */}
         <div>
