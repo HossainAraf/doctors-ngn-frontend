@@ -1,3 +1,7 @@
+nav {
+  background: linear-gradient(17deg, #000, #020617 59%);
+}
+/* Animated Text */
 .text-copy {
   fill: none;
   stroke-dasharray: 6% 5%;
@@ -37,3 +41,5 @@
   stroke: #FDB731;
   animation-delay: -5s;
 }
+
+/* ------- */

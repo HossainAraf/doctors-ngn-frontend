@@ -13,7 +13,7 @@ function Nav() {
 
   // RETURN USING TAILWIND CLASSES
   return (
-    <nav className="bg-zinc-950 p-4">
+    <nav className="p-4">
       <div className="container mx-auto flex justify-between items-center">
         <AnimatedText />
         {/* HAMBURGER MENU */}
