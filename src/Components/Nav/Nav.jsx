@@ -1,6 +1,7 @@
 // IMPORTS
 import { useState } from 'react';
 import AnimatedText from './AnimatedText';
+import '../../Styles/nav.css';
 import logo from '../../Assets/Img/logo.png';
 
 // COMPONENT

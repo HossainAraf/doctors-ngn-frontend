@@ -1,0 +1,39 @@
+.text-copy {
+  fill: none;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
+
+/* Apply different stroke colors for each letter */
+.text-copy1 {
+  stroke: #4D163D;
+  animation-delay: -1s;
+}
+
+.text-copy2 {
+  stroke: #840037;
+  animation-delay: -2s;
+}
+
+.text-copy3 {
+  stroke: #BD0034;
+  animation-delay: -3s;
+}
+
+.text-copy4 {
+  stroke: #BD0034;
+  animation-delay: -4s;
+}
+
+.text-copy5 {
+  stroke: #FDB731;
+  animation-delay: -5s;
+}
