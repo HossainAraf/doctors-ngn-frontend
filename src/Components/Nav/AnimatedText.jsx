@@ -8,7 +8,7 @@ function AnimatedText() {
           x="50%"
           y="50%"
           textAnchor="middle"
-          className="text-copy font-bold text-7xl fill-none stroke-white stroke-5 stroke-dasharray animate-stroke"
+          className="text-copy font-bold text-6xl fill-none stroke-white stroke-5 stroke-dasharray animate-stroke"
         >
           <tspan className="text-copy1">*</tspan>
           <tspan className="text-copy2">U</tspan>
