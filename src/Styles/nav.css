@@ -1,6 +1,6 @@
 .text-copy {
   fill: none;
-  stroke-dasharray: 6% 29%;
+  stroke-dasharray: 6% 5%;
   stroke-width: 5px;
   stroke-dashoffset: 0%;
   animation: stroke-offset 5.5s infinite linear;
