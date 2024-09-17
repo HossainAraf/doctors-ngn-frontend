@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Nav from './Components/Nav';
 import Home from './Components/Home/Home';
 import DoctorList from './Components/DoctorList';
+import Nav from './Components/Nav/Nav';
 import './App.css';
 
 const App = () => (

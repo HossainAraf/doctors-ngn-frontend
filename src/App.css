@@ -3,6 +3,8 @@
 @import 'tailwindcss/utilities';
 
 body {
-  color: #fff;
-  background-color: #220d0d;
+  color: #020202;
+  background: #c0c0c0;
 }
+
+/* #020617; */
