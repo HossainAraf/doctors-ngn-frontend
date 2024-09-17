@@ -10,11 +10,11 @@ function AnimatedText() {
           textAnchor="middle"
           className="text-copy font-bold text-7xl fill-none stroke-white stroke-5 stroke-dasharray animate-stroke"
         >
-          <tspan className="text-copy1">U</tspan>
-          <tspan className="text-copy2">Te</tspan>
-          <tspan className="text-copy3">ch</tspan>
-          <tspan className="text-copy4">Dyna</tspan>
-          <tspan className="text-copy5">mics</tspan>
+          <tspan className="text-copy1">*</tspan>
+          <tspan className="text-copy2">U</tspan>
+          <tspan className="text-copy3">Tech</tspan>
+          <tspan className="text-copy4">Dynamics</tspan>
+          <tspan className="text-copy5">*</tspan>
         </text>
       </svg>
     </div>
