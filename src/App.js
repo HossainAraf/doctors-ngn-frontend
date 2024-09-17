@@ -6,7 +6,7 @@ import './App.css';
 
 const App = () => (
   <Router>
-    <div className="container">
+    <div className="container text-center">
       <Nav />
       <div className="App">
         <Routes>

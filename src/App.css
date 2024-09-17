@@ -3,8 +3,12 @@
 @import 'tailwindcss/utilities';
 
 body {
-  color: #020202;
-  background: #c0c0c0;
+  color: #c0c0c0;
+  background: #010409;
+}
+
+.container {
+  max-width: 100%;
 }
 
 /* #020617; */
