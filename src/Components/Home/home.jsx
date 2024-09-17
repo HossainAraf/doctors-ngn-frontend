@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { fetchSpecifications } from '../../Services/apiService';
 import Button from '../Button';
 import DoctorSlider from './Slider';
+import '../../Styles/home.css';
 
 // COMPONENT
 const Home = () => {
@@ -21,7 +22,7 @@ const Home = () => {
   // RETURN
   return (
     <div>
-      <h1>Home</h1>
+      <h1 className="scroll-text"><p>ডাক্তার ও মেডিক্যাল সার্ভিস সংক্রান্ত তথ্য , নওগাঁ </p></h1>
       <DoctorSlider specifications={specifications} />
       {specifications.length > 0 ? (
         <div>
