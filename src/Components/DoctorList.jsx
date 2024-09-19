@@ -18,7 +18,6 @@ const DoctorList = () => {
       const specification = specificationsData.find(spec => spec.id === parseInt(specificationId)); // Find the specification by id
       setSpecificationName(specification?.name || 'Unknown Specification');
     };
-
     loadDoctors();
     loadSpecification();
   }, [specificationId]); // Fetch doctors and specification whenever specificationId changes
@@ -26,8 +25,8 @@ const DoctorList = () => {
   return (
     <div>
       <h2>
-        Doctors List for Specification:
         {specificationName}
+        &nbsp; বিশেষজ্ঞ ডাক্তারগণঃ
       </h2>
       {doctors.length > 0 ? (
         <ul>
