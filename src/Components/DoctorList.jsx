@@ -23,7 +23,7 @@ const DoctorList = () => {
   }, [specificationId]); // Fetch doctors and specification whenever specificationId changes
 
   return (
-    <div>
+    <div className="bg-gray">
       <h2>
         {specificationName}
         &nbsp; বিশেষজ্ঞ ডাক্তারগণঃ

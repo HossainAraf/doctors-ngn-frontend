@@ -3,8 +3,7 @@
 @import 'tailwindcss/utilities';
 
 body {
-  color: #fff;
-  background: #010409;  /* #020617; #c0c0c0 =silver */
+  background: transparent;
 }
 
 .container {

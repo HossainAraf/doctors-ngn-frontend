@@ -21,8 +21,8 @@ const Home = () => {
 
   // RETURN
   return (
-    <div>
-      <h1 className="scroll-text"><p>ডাক্তার ও মেডিক্যাল সার্ভিস সংক্রান্ত তথ্য , নওগাঁ </p></h1>
+    <div className="home">
+      <h1 className="scroll-text"><p className="text-slate-950">ডাক্তার ও মেডিক্যাল সার্ভিস সংক্রান্ত তথ্য , নওগাঁ </p></h1>
       <DoctorSlider specifications={specifications} />
       {specifications.length > 0 ? (
         <div>
