@@ -33,5 +33,25 @@ const fetchDoctorsBySpecificationId = async (specificationId) => {
   }
 };
 
+// ADD NEW DOCTOR
+const addDoctor = async (doctor) => {
+  try {
+    const response = await fetch('http://localhost:3000/api/v1/doctors', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(doctor),
+    });
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status} - ${response.statusText}`);
+    }
+    return await response.json();
+  } catch (error) {
+    // console.error('Error adding doctor:', error);
+    return null;
+  }
+};
+
 // EXPORTS
-export { fetchSpecifications, fetchDoctorsBySpecificationId };
+export { fetchSpecifications, fetchDoctorsBySpecificationId, addDoctor };
