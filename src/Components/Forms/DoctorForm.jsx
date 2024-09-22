@@ -37,7 +37,9 @@ const DoctorForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const newDoctor = await addDoctor({ doctor: formData }); // Wrap in an object with a `doctor` key
+    const newDoctor = await addDoctor({
+      doctor: formData,
+    }); // Wrap in an object with a `doctor` key
     if (newDoctor) {
       alert('Doctor added successfully!');
       setFormData({
@@ -104,6 +106,7 @@ const DoctorForm = () => {
           name="degree"
           value={formData.degree}
           onChange={handleChange}
+          required
         />
       </div>
       <div>
@@ -114,6 +117,7 @@ const DoctorForm = () => {
           name="designation"
           value={formData.designation}
           onChange={handleChange}
+          required
         />
       </div>
       <div>
@@ -124,6 +128,7 @@ const DoctorForm = () => {
           name="chember"
           value={formData.chember}
           onChange={handleChange}
+          required
         />
       </div>
       <div>
@@ -134,6 +139,7 @@ const DoctorForm = () => {
           name="time"
           value={formData.time}
           onChange={handleChange}
+          required
         />
       </div>
       <div>
@@ -144,6 +150,7 @@ const DoctorForm = () => {
           name="contact"
           value={formData.contact}
           onChange={handleChange}
+          required
         />
       </div>
       <button type="submit">Add Doctor</button>
