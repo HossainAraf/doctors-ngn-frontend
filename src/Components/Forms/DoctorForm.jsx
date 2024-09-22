@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+// IMPORTS
+import React, { useState, useEffect } from 'react';
 import { addDoctor, fetchSpecifications } from '../../Services/apiService';
 
+// COMPONENT
 const DoctorForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -13,6 +15,19 @@ const DoctorForm = () => {
     contact: '',
   });
 
+  // DEFINE STATE FOR SPECIFICATIONS
+  const [specifications, setSpecifications] = useState([]);
+  // FETCH SPECIFICATIONS ON COMPONENT MOUNT
+  useEffect(() => {
+    const getSpecifications = async () => {
+      const data = await fetchSpecifications();
+      console.log('Specifications set in state:', data);
+      setSpecifications(data);
+    };
+    getSpecifications();
+  }, []);
+
+  // EVENT HANDLERS
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -53,16 +68,22 @@ const DoctorForm = () => {
           required
         />
       </div>
-      <div>
-        <label htmlFor="specification_id">Specification ID:</label>
-        <input
-          type="text"
+      <div className="my-4">
+        <label htmlFor="specification_id">Specification:</label>
+        <select
           id="specification_id"
           name="specification_id"
           value={formData.specification_id}
           onChange={handleChange}
           required
-        />
+        >
+          <option value="">Select a specification</option>
+          {specifications.map((specification) => (
+            <option key={specification.id} value={specification.id}>
+              {specification.name}
+            </option>
+          ))}
+        </select>
       </div>
       <div>
         <label htmlFor="display_order">Display Order:</label>
