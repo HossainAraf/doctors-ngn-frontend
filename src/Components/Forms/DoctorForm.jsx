@@ -63,109 +63,112 @@ const DoctorForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full px-9">
-      <div className="w-full">
-        <label htmlFor="name">Doctor&apos;s Name:</label>
-        <BanglaInput
-          className="w-full"
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-      </div>
+    <>
+      <h2 className="text-center text-2xl font-bold">Add New Doctor</h2>
+      <form onSubmit={handleSubmit} className="w-full px-9">
+        <div className="w-full">
+          <label htmlFor="name">Doctor&apos;s Name:</label>
+          <BanglaInput
+            className="w-full"
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
 
-      <div className="my-4">
-        <label htmlFor="specification_id">Specification:</label>
-        <select
-          id="specification_id"
-          name="specification_id"
-          value={formData.specification_id}
-          onChange={handleChange}
-          required
-        >
-          <option value="">Select a specification</option>
-          {specifications.map((specification) => (
-            <option key={specification.id} value={specification.id}>
-              {specification.name}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div>
-        <label htmlFor="display_order">Display Order:</label>
-        <input
-          type="number"
-          id="display_order"
-          name="display_order"
-          value={formData.display_order}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="degree">Degree:</label>
-        <BanglaInput
-          className="w-full"
-          type="text"
-          id="degree"
-          name="degree"
-          value={formData.degree}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="designation">Designation:</label>
-        <BanglaInput
-          className="w-full"
-          type="text"
-          id="designation"
-          name="designation"
-          value={formData.designation}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="chember">Chember:</label>
-        <BanglaInput
-          className="w-full"
-          type="text"
-          id="chember"
-          name="chember"
-          value={formData.chember}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="time">Time:</label>
-        <BanglaInput
-          type="text"
-          id="time"
-          name="time"
-          value={formData.time}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="contact">Contact:</label>
-        <input
-          type="text"
-          id="contact"
-          className="my-2"
-          name="contact"
-          value={formData.contact}
-          onChange={handleChange}
-          required
-        />
-      </div>
-      <button className="text-green-700 my-3" type="submit">Add Doctor</button>
-    </form>
+        <div className="my-4">
+          <label htmlFor="specification_id">Specification:</label>
+          <select
+            id="specification_id"
+            name="specification_id"
+            value={formData.specification_id}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Select a specification</option>
+            {specifications.map((specification) => (
+              <option key={specification.id} value={specification.id}>
+                {specification.name}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="display_order">Display Order:</label>
+          <input
+            type="number"
+            id="display_order"
+            name="display_order"
+            value={formData.display_order}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="degree">Degree:</label>
+          <BanglaInput
+            className="w-full"
+            type="text"
+            id="degree"
+            name="degree"
+            value={formData.degree}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="designation">Designation:</label>
+          <BanglaInput
+            className="w-full"
+            type="text"
+            id="designation"
+            name="designation"
+            value={formData.designation}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="chember">Chember:</label>
+          <BanglaInput
+            className="w-full"
+            type="text"
+            id="chember"
+            name="chember"
+            value={formData.chember}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="time">Time:</label>
+          <BanglaInput
+            type="text"
+            id="time"
+            name="time"
+            value={formData.time}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="contact">Contact:</label>
+          <input
+            type="text"
+            id="contact"
+            className="my-2"
+            name="contact"
+            value={formData.contact}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <button className="text-green-700 my-3" type="submit">Add Doctor</button>
+      </form>
+    </>
   );
 };
 
