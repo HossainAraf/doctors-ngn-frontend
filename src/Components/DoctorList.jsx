@@ -1,36 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchDoctorsBySpecificationId } from '../Services/apiService';
+import { fetchDoctorsBySpecificationId, fetchSpecifications } from '../Services/apiService';
 
 const DoctorList = () => {
   const { specificationId } = useParams(); // Get the specification ID from the URL
   const [doctors, setDoctors] = useState([]);
-
-  // console.log(`Rendering DoctorList for specificationId: ${specificationId}`);
+  const [specificationName, setSpecificationName] = useState(''); // State to store the specification name
 
   useEffect(() => {
     const loadDoctors = async () => {
-      const data = await fetchDoctorsBySpecificationId(specificationId);
-      setDoctors(data);
+      const doctorsData = await fetchDoctorsBySpecificationId(specificationId);
+      setDoctors(doctorsData);
     };
-    //     // Convert single object to array if necessary
-    //     if (Array.isArray(data)) {
-    //       setDoctors(data); // Set doctors if the response is already an array
-    //     } else {
-    //       setDoctors([data]); // Wrap the single object in an array
-    //     }
 
+    const loadSpecification = async () => {
+      const specificationsData = await fetchSpecifications(); // Fetch all specifications
+      const specification = specificationsData.find((
+        spec,
+      ) => spec.id === parseInt(specificationId, 10)); // Find the specification by id
+      setSpecificationName(specification?.name || 'Unknown Specification');
+    };
     loadDoctors();
-  }, [specificationId]); // Refresh the list when the specificationId changes
-
-  // Add log to ensure data is set
-  // console.log('Doctors:', doctors);
+    loadSpecification();
+  }, [specificationId]); // Fetch doctors and specification whenever specificationId changes
 
   return (
-    <div>
+    <div className="bg-gray">
       <h2>
-        Doctors List for Specification:
-        {specificationId}
+        {specificationName}
+        &nbsp; বিশেষজ্ঞ ডাক্তারগণঃ
       </h2>
       {doctors.length > 0 ? (
         <ul>

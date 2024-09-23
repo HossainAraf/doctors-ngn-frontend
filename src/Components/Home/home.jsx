@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { fetchSpecifications } from '../../Services/apiService';
 import Button from '../Button';
 import DoctorSlider from './Slider';
+import '../../Styles/home.css';
 
 // COMPONENT
 const Home = () => {
@@ -20,14 +21,14 @@ const Home = () => {
 
   // RETURN
   return (
-    <div>
-      <h1>Home</h1>
+    <div className="home">
+      <h1 className="scroll-text"><p className="text-slate-950">ডাক্তার ও মেডিক্যাল সার্ভিস সংক্রান্ত তথ্য , নওগাঁ </p></h1>
       <DoctorSlider specifications={specifications} />
       {specifications.length > 0 ? (
         <div>
           {specifications.map((spec) => (
             <Link key={spec.id} to={`/doctors/${spec.id}`}>
-              <Button label={spec.name} className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" />
+              <Button label={spec.name} className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 mx-1 my-1 border border-blue-500 hover:border-transparent rounded" />
             </Link>
           ))}
         </div>
