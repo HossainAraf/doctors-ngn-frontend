@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 const BanglaInput = ({
-  id, name, value, onChange, ...props
+  id, className, name, value, onChange, ...props
 }) => {
   const [inputValue, setInputValue] = useState(value || '');
   const BanglaRegex = /^[\u0980-\u09FF\s.,()\-!@#$%^&*+=?/{}[\]<>:;"'\\|~`_]+$/;
@@ -17,6 +17,7 @@ const BanglaInput = ({
     <div>
       <input
         id={id}
+        className={className}
         name={name}
         value={inputValue}
         onChange={handleChange}
@@ -35,6 +36,7 @@ const BanglaInput = ({
 // PROPS VALIDATION
 BanglaInput.propTypes = {
   id: PropTypes.string.isRequired,
+  className: PropTypes.string,
   name: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
@@ -50,6 +52,7 @@ BanglaInput.defaultProps = {
   placeholder: '', // No placeholder by default
   required: false, // Not required by default
   disabled: false, // Not disabled by default
+  className: '', // No class by default
 };
 
 export default BanglaInput;

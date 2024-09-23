@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import DoctorList from './Components/DoctorList';
 import Nav from './Components/Nav/Nav';
+import AddContent from './Components/AddContent';
 import DoctorForm from './Components/Forms/DoctorForm';
 import './App.css';
 
@@ -12,6 +13,7 @@ const App = () => (
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/add-content" element={<AddContent />} />
           <Route path="/add-doctor" element={<DoctorForm />} />
           <Route path="/ambulance" />
           <Route path="/emergency" />
