@@ -1,6 +1,8 @@
 // FETCH SPECIFICATIONS
 const fetchSpecifications = async () => {
   try {
+    console.log('Sending doctor data:', doctor); // Log the doctor data being sent
+
     const response = await fetch('http://localhost:3000/api/v1/specifications');
     if (!response.ok) {
       throw new Error(`Error: ${response.status} - ${response.statusText}`);

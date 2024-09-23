@@ -40,6 +40,7 @@ const DoctorForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const newDoctor = await addDoctor({
       doctor: formData,
     }); // Wrap in an object with a `doctor` key
@@ -73,6 +74,7 @@ const DoctorForm = () => {
           required
         />
       </div>
+
       <div className="my-4">
         <label htmlFor="specification_id">Specification:</label>
         <select
