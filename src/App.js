@@ -4,6 +4,7 @@ import DoctorList from './Components/DoctorList';
 import Nav from './Components/Nav/Nav';
 import AddContent from './Components/AddContent';
 import DoctorForm from './Components/Forms/DoctorForm';
+import Footer from './Components/Footer';
 import './App.css';
 
 const App = () => (
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/contact" />
         </Routes>
       </div>
+      <Footer />
     </div>
   </Router>
 );
