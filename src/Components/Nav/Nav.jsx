@@ -59,7 +59,7 @@ const Nav = () => {
             isOpen ? 'block' : 'hidden'
           } w-full md:w-auto mt-4 md:mt-0`}
         >
-          <a href="/" className="block text-white hover:text-gray-300 py-2 px-4">Home</a>
+          <a href="/" className="block text-white hover:text-gray-300 py-2 px-4"></a>
           <a href="/ambulance" className="block text-white hover:text-gray-300 py-2 px-4">Ambulance</a>
           <a href="/emergency" className="block text-white hover:text-gray-300 py-2 px-4">Emergency Contacts</a>
           <a href="/doctors" className="block text-white hover:text-gray-300 py-2 px-4">Doctors</a>
@@ -70,6 +70,7 @@ const Nav = () => {
           <a href="/disclaimer" className="block text-white hover:text-gray-300 py-2 px-4">Disclaimer</a>
           <a href="/about" className="block text-white hover:text-gray-300 py-2 px-4">About  Us</a>
           <a href="/contact" className="block text-white hover:text-gray-300 py-2 px-4">Contact Us</a>
+          <a href="/add-content" className="block text-white hover:text-gray-300 py-2 px-4">Add / Update Data </a>
         </div>
       </div>
     </nav>
