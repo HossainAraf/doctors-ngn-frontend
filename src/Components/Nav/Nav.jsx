@@ -59,17 +59,17 @@ const Nav = () => {
             isOpen ? 'block' : 'hidden'
           } w-full md:w-auto mt-4 md:mt-0`}
         >
-          <a href="/" className="block text-white hover:text-gray-300 py-2 px-4"></a>
-          <a href="/ambulance" className="block text-white hover:text-gray-300 py-2 px-4">Ambulance</a>
-          <a href="/emergency" className="block text-white hover:text-gray-300 py-2 px-4">Emergency Contacts</a>
-          <a href="/doctors" className="block text-white hover:text-gray-300 py-2 px-4">Doctors</a>
-          <a href="/clinics" className="block text-white hover:text-gray-300 py-2 px-4">Clinics</a>
-          <a href="/hospitals" className="block text-white hover:text-gray-300 py-2 px-4">Hospitals</a>
-          <a href="/pharmacy" className="block text-white hover:text-gray-300 py-2 px-4">Pharmacy</a>
-          <a href="/blood-bank" className="block text-white hover:text-gray-300 py-2 px-4">Blood Bank</a>
-          <a href="/disclaimer" className="block text-white hover:text-gray-300 py-2 px-4">Disclaimer</a>
-          <a href="/about" className="block text-white hover:text-gray-300 py-2 px-4">About  Us</a>
+          <a href="/" className="block text-white hover:text-gray-300 py-2 px-4">হোম পেইজ</a>
+          <a href="/ambulance" className="block text-white hover:text-gray-300 py-2 px-4">এ্যাম্বুলেন্স</a>
+          <a href="/emergency" className="block text-white hover:text-gray-300 py-2 px-4">এমারজেন্সি নম্বর</a>
+          <a href="/blood-bank" className="block text-white hover:text-gray-300 py-2 px-4">ব্লাড ব্যাংক</a>
+          <a href="/doctors" className="block text-white hover:text-gray-300 py-2 px-4">ডাক্তার</a>
+          <a href="/clinics" className="block text-white hover:text-gray-300 py-2 px-4">ক্লিনিক ও হাসপাতাল</a>
+          <a href="/pharmacy" className="block text-white hover:text-gray-300 py-2 px-4">ফার্মেসি</a>
+          <a href="/#" className="block text-white hover:text-gray-300 py-2 px-4">ফিডব্যাক</a>
           <a href="/contact" className="block text-white hover:text-gray-300 py-2 px-4">Contact Us</a>
+          <a href="/about" className="block text-white hover:text-gray-300 py-2 px-4">About  Us</a>
+          <a href="/disclaimer" className="block text-white hover:text-gray-300 py-2 px-4">Disclaimer</a>
           <a href="/add-content" className="block text-white hover:text-gray-300 py-2 px-4">Add / Update Data </a>
         </div>
       </div>
