@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 // IMPORTS
 import React, { useState, useEffect } from 'react';
 import { addDoctor, fetchSpecifications } from '../../Services/apiService';
@@ -22,7 +23,7 @@ const DoctorForm = () => {
   useEffect(() => {
     const getSpecifications = async () => {
       const data = await fetchSpecifications();
-      console.log('Specifications set in state:', data);
+      // console.log('Specifications set in state:', data);
       setSpecifications(data);
     };
     getSpecifications();
