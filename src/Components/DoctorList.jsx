@@ -15,7 +15,8 @@ const DoctorList = () => {
 
     const loadSpecification = async () => {
       const specificationsData = await fetchSpecifications(); // Fetch all specifications
-      const specification = specificationsData.find((spec) => spec.id === parseInt(specificationId)); // Find the specification by id
+      const specification = specificationsData.find((
+        spec) => spec.id === parseInt(specificationId, 10)); // Find the specification by id
       setSpecificationName(specification?.name || 'Unknown Specification');
     };
     loadDoctors();
