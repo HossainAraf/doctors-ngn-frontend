@@ -62,10 +62,11 @@ const DoctorForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Name:</label>
+    <form onSubmit={handleSubmit} className="w-full px-9">
+      <div className="w-full">
+        <label htmlFor="name">Doctor&apos;s Name:</label>
         <BanglaInput
+          className="w-full"
           type="text"
           id="name"
           name="name"
@@ -106,6 +107,7 @@ const DoctorForm = () => {
       <div>
         <label htmlFor="degree">Degree:</label>
         <BanglaInput
+          className="w-full"
           type="text"
           id="degree"
           name="degree"
@@ -117,6 +119,7 @@ const DoctorForm = () => {
       <div>
         <label htmlFor="designation">Designation:</label>
         <BanglaInput
+          className="w-full"
           type="text"
           id="designation"
           name="designation"
@@ -128,6 +131,7 @@ const DoctorForm = () => {
       <div>
         <label htmlFor="chember">Chember:</label>
         <BanglaInput
+          className="w-full"
           type="text"
           id="chember"
           name="chember"
@@ -158,7 +162,7 @@ const DoctorForm = () => {
           required
         />
       </div>
-      <button type="submit">Add Doctor</button>
+      <button className="button-primary" type="submit">Add Doctor</button>
     </form>
   );
 };
