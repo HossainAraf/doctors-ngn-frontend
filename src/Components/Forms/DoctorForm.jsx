@@ -162,7 +162,7 @@ const DoctorForm = () => {
           required
         />
       </div>
-      <button className="button-primary" type="submit">Add Doctor</button>
+      <button className="text-green-700 my-3" type="submit">Add Doctor</button>
     </form>
   );
 };
