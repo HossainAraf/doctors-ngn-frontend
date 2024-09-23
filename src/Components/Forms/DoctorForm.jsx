@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { addDoctor, fetchSpecifications } from '../../Services/apiService';
 import BanglaInput from '../BanglaInput';
+import '../../Styles/Form/addDoctor.css';
 
 // COMPONENT
 const DoctorForm = () => {
@@ -156,6 +157,7 @@ const DoctorForm = () => {
         <input
           type="text"
           id="contact"
+          className="my-2"
           name="contact"
           value={formData.contact}
           onChange={handleChange}
