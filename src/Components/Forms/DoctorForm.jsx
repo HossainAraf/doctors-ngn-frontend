@@ -1,6 +1,7 @@
 // IMPORTS
 import React, { useState, useEffect } from 'react';
 import { addDoctor, fetchSpecifications } from '../../Services/apiService';
+import BanglaInput from '../BanglaInput';
 
 // COMPONENT
 const DoctorForm = () => {
@@ -29,10 +30,11 @@ const DoctorForm = () => {
 
   // EVENT HANDLERS
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = async (e) => {
@@ -61,7 +63,7 @@ const DoctorForm = () => {
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="name">Name:</label>
-        <input
+        <BanglaInput
           type="text"
           id="name"
           name="name"
@@ -100,7 +102,7 @@ const DoctorForm = () => {
       </div>
       <div>
         <label htmlFor="degree">Degree:</label>
-        <input
+        <BanglaInput
           type="text"
           id="degree"
           name="degree"
@@ -111,7 +113,7 @@ const DoctorForm = () => {
       </div>
       <div>
         <label htmlFor="designation">Designation:</label>
-        <input
+        <BanglaInput
           type="text"
           id="designation"
           name="designation"
@@ -122,7 +124,7 @@ const DoctorForm = () => {
       </div>
       <div>
         <label htmlFor="chember">Chember:</label>
-        <input
+        <BanglaInput
           type="text"
           id="chember"
           name="chember"
@@ -133,7 +135,7 @@ const DoctorForm = () => {
       </div>
       <div>
         <label htmlFor="time">Time:</label>
-        <input
+        <BanglaInput
           type="text"
           id="time"
           name="time"
