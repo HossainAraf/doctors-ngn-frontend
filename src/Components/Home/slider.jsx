@@ -41,7 +41,7 @@ const DoctorSlider = ({ doctors }) => {
             <img src={imageMap[doctor.id]} alt={`doctor ${doctor.name}`} />
           </div>
           <h3>
-            ডাঃ
+            ডাঃ&nbsp;
             {doctor.name}
           </h3>
           <h4>
