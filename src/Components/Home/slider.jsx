@@ -38,7 +38,7 @@ const DoctorSlider = ({ doctors }) => {
       {filterDoctors.map((doctor) => (
         <div key={doctor.id} className="flex text-center">
           <div className="flex justify-center">
-            <img src={imageMap[doctor.id]} alt={`doctor ${doctor.name}`} />
+            <img className="w-32" src={imageMap[doctor.id]} alt={`doctor ${doctor.name}`} />
           </div>
           <h3>
             ডাঃ&nbsp;
