@@ -16,6 +16,11 @@ const DoctorSlider = ({ specifications }) => {
     pauseOnHover: true,
   };
 
+  // FILTER TO GET SPECIFIC DOCTORS
+const doctorsIdToShow = [2, 10, 14];
+
+  const filterDoctors = doctors.filter((doctor) => doctorsIdToShow).slice(0, 3);
+
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
     <Slider {...settings}>
