@@ -24,17 +24,10 @@ const doctorsIdToShow = [2, 10, 14];
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
     <Slider {...settings}>
-      {specifications.slice(0, 3).map((spec) => (
-        <div key={spec.id}>
-          {/* <img src={emdad} alt="doctor" /> */}
-          <h3>
-            Specification:
-            {spec.name}
-          </h3>
-          <p>
-            Desc:
-            {spec.description}
-          </p>
+      {filterDoctors.map((doctor) => (
+        <div key={doctor.id}>
+          <h3>Doctor: {doctor.name}</h3>
+          <h4>Degree: {doctor.degree}</h4>
         </div>
       ))}
     </Slider>
