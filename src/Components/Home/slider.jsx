@@ -3,6 +3,16 @@ import Slider from 'react-slick';
 import { PropTypes } from 'prop-types';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import mamun from '../../Assets/Img/mamun.png';
+import arifur from '../../Assets/Img/arifur.png';
+import mohaimenur from '../../Assets/Img/mohaimenur.png';
+
+// IMAGE MAPPING
+const imageMap = {
+  2: mamun,
+  10: arifur,
+  14: mohaimenur,
+};
 
 const DoctorSlider = ({ doctors }) => {
   const settings = {
