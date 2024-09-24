@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <div className="home">
       <h1 className="scroll-text"><p className="text-slate-950">ডাক্তার ও মেডিক্যাল সার্ভিস সংক্রান্ত তথ্য , নওগাঁ </p></h1>
-      <DoctorSlider specifications={specifications} />
+      <DoctorSlider doctors={doctors} />
       {specifications.length > 0 ? (
         <div>
           {specifications.map((spec) => (

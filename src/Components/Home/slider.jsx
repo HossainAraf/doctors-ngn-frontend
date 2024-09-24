@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const DoctorSlider = ({ specifications }) => {
+const DoctorSlider = ({ doctors }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -19,7 +19,8 @@ const DoctorSlider = ({ specifications }) => {
   // FILTER TO GET SPECIFIC DOCTORS
 const doctorsIdToShow = [2, 10, 14];
 
-  const filterDoctors = doctors.filter((doctor) => doctorsIdToShow).slice(0, 3);
+//CHECK IF doctor's id IS IN doctorIdToShow ARRAY
+  const filterDoctors = doctors.filter((doctor) => doctorsIdToShow.includes(doctor.id)).slice(0, 3);
 
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
