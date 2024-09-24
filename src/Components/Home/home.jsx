@@ -20,8 +20,14 @@ const Home = () => {
     loadSpecifications(); // Call the function
   }, []); // Empty array to run only once
 
-  // FETCH ALL DOCTORS
-  
+  // FETCH ALL DOCTORS USING useEffect async await
+  useEffect(() => {
+    const loadDoctors = async () => {
+      const data = await fetchDoctors();
+      setDoctors(data);
+    };
+    loadDoctors();
+  }, []);
 
   // RETURN
   return (
