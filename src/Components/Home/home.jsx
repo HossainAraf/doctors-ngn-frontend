@@ -1,7 +1,7 @@
 // IMPORT
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchSpecifications } from '../../Services/apiService';
+import { fetchSpecifications, fetchDoctors  } from '../../Services/apiService';
 import Button from '../Button';
 import DoctorSlider from './Slider';
 import '../../Styles/home.css';
@@ -9,8 +9,9 @@ import '../../Styles/home.css';
 // COMPONENT
 const Home = () => {
   const [specifications, setSpecifications] = useState([]);
+  const [doctors, setDoctors] = useState([]);
 
-  // FETCH DATA using useEffect async await
+  // FETCH specifications USING useEffect async await
   useEffect(() => {
     const loadSpecifications = async () => {
       const data = await fetchSpecifications();
@@ -18,6 +19,9 @@ const Home = () => {
     };
     loadSpecifications(); // Call the function
   }, []); // Empty array to run only once
+
+  // FETCH ALL DOCTORS
+  
 
   // RETURN
   return (

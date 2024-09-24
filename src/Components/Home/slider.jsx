@@ -17,9 +17,9 @@ const DoctorSlider = ({ doctors }) => {
   };
 
   // FILTER TO GET SPECIFIC DOCTORS
-const doctorsIdToShow = [2, 10, 14];
+  const doctorsIdToShow = [2, 10, 14];
 
-//CHECK IF doctor's id IS IN doctorIdToShow ARRAY
+  //  CHECK IF doctor's id IS IN doctorIdToShow ARRAY
   const filterDoctors = doctors.filter((doctor) => doctorsIdToShow.includes(doctor.id)).slice(0, 3);
 
   return (
@@ -27,8 +27,14 @@ const doctorsIdToShow = [2, 10, 14];
     <Slider {...settings}>
       {filterDoctors.map((doctor) => (
         <div key={doctor.id}>
-          <h3>Doctor: {doctor.name}</h3>
-          <h4>Degree: {doctor.degree}</h4>
+          <h3>
+            Doctor:
+            {doctor.name}
+          </h3>
+          <h4>
+            Degree:
+            {doctor.degree}
+          </h4>
         </div>
       ))}
     </Slider>
