@@ -36,14 +36,15 @@ const DoctorSlider = ({ doctors }) => {
     // eslint-disable-next-line react/jsx-props-no-spreading
     <Slider {...settings}>
       {filterDoctors.map((doctor) => (
-        <div key={doctor.id}>
-          <img className="h-auto w-24" src={imageMap[doctor.id]} alt={`doctor ${doctor.name}`} />
+        <div key={doctor.id} className="flex text-center">
+          <div className="flex justify-center">
+            <img src={imageMap[doctor.id]} alt={`doctor ${doctor.name}`} />
+          </div>
           <h3>
-            Doctor:
+            ডাঃ
             {doctor.name}
           </h3>
           <h4>
-            Degree:
             {doctor.degree}
           </h4>
         </div>
