@@ -2,7 +2,10 @@
 
 // COMPONENT
 const Footer = () => (
-  <p>I am Footer</p>
+  <>
+    <p>&copy; 2024 UTech Dynamics. All rights reserved.</p>
+
+  </>
 );
 
 // EXPORTS
