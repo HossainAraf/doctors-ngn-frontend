@@ -15,7 +15,7 @@ const fetchSpecifications = async () => {
   }
 };
 
-// FETCH DOCTORS
+// FETCH DOCTORS BY SPECIFICATION ID
 const fetchDoctorsBySpecificationId = async (specificationId) => {
   try {
     const response = await fetch(`http://localhost:3000/api/v1/specifications/${specificationId}/doctors`);
@@ -33,6 +33,13 @@ const fetchDoctorsBySpecificationId = async (specificationId) => {
     // console.error('Error fetching doctors:', error);
     return [];
   }
+};
+
+// FETCH ALL DOCTORS
+const fetchDoctors = async () => {
+  const response = await fetch('http://localhost:3000/api/v1/doctors');
+  const data = await response.json();
+  return data;
 };
 
 // ADD NEW DOCTOR
@@ -56,4 +63,6 @@ const addDoctor = async (doctor) => {
 };
 
 // EXPORTS
-export { fetchSpecifications, fetchDoctorsBySpecificationId, addDoctor };
+export {
+  fetchSpecifications, fetchDoctorsBySpecificationId, fetchDoctors, addDoctor
+};

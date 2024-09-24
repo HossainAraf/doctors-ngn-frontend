@@ -3,8 +3,18 @@ import Slider from 'react-slick';
 import { PropTypes } from 'prop-types';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import mamun from '../../Assets/Img/mamun.png';
+import arifur from '../../Assets/Img/arifur.png';
+import mohaimenur from '../../Assets/Img/mohaimenur.png';
 
-const DoctorSlider = ({ specifications }) => {
+// IMAGE MAPPING
+const imageMap = {
+  2: mamun,
+  10: arifur,
+  14: mohaimenur,
+};
+
+const DoctorSlider = ({ doctors }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -16,20 +26,27 @@ const DoctorSlider = ({ specifications }) => {
     pauseOnHover: true,
   };
 
+  // FILTER TO GET SPECIFIC DOCTORS
+  const doctorsIdToShow = [2, 10, 14];
+
+  //  CHECK IF doctor's id IS IN doctorIdToShow ARRAY
+  const filterDoctors = doctors.filter((doctor) => doctorsIdToShow.includes(doctor.id)).slice(0, 3);
+
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
     <Slider {...settings}>
-      {specifications.slice(0, 3).map((spec) => (
-        <div key={spec.id}>
-          {/* <img src={emdad} alt="doctor" /> */}
+      {filterDoctors.map((doctor) => (
+        <div key={doctor.id} className="flex text-center">
+          <div className="flex justify-center">
+            <img className="w-32" src={imageMap[doctor.id]} alt={`doctor ${doctor.name}`} />
+          </div>
           <h3>
-            Specification:
-            {spec.name}
+            ডাঃ&nbsp;
+            {doctor.name}
           </h3>
-          <p>
-            Desc:
-            {spec.description}
-          </p>
+          <h4>
+            {doctor.degree}
+          </h4>
         </div>
       ))}
     </Slider>
@@ -43,6 +60,13 @@ DoctorSlider.propTypes = {
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  doctors: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired, // id must be a number
+      name: PropTypes.string.isRequired, // name must be a string
+      degree: PropTypes.string.isRequired, // degree must be a string
     }),
   ).isRequired,
 };

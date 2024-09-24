@@ -1,7 +1,7 @@
 // IMPORT
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchSpecifications } from '../../Services/apiService';
+import { fetchSpecifications, fetchDoctors } from '../../Services/apiService';
 import Button from '../Button';
 import DoctorSlider from './Slider';
 import '../../Styles/home.css';
@@ -9,8 +9,9 @@ import '../../Styles/home.css';
 // COMPONENT
 const Home = () => {
   const [specifications, setSpecifications] = useState([]);
+  const [doctors, setDoctors] = useState([]);
 
-  // FETCH DATA using useEffect async await
+  // FETCH specifications USING useEffect async await
   useEffect(() => {
     const loadSpecifications = async () => {
       const data = await fetchSpecifications();
@@ -19,11 +20,20 @@ const Home = () => {
     loadSpecifications(); // Call the function
   }, []); // Empty array to run only once
 
+  // FETCH ALL DOCTORS USING useEffect async await
+  useEffect(() => {
+    const loadDoctors = async () => {
+      const data = await fetchDoctors();
+      setDoctors(data);
+    };
+    loadDoctors();
+  }, []);
+
   // RETURN
   return (
     <div className="home">
       <h1 className="scroll-text"><p className="text-slate-950">ডাক্তার ও মেডিক্যাল সার্ভিস সংক্রান্ত তথ্য , নওগাঁ </p></h1>
-      <DoctorSlider specifications={specifications} />
+      <DoctorSlider doctors={doctors} />
       {specifications.length > 0 ? (
         <div>
           {specifications.map((spec) => (
