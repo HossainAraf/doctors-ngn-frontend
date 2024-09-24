@@ -27,6 +27,7 @@ const DoctorSlider = ({ doctors }) => {
     <Slider {...settings}>
       {filterDoctors.map((doctor) => (
         <div key={doctor.id}>
+          <img className="h-auto w-24" src={`../../Assets/Img/doctor-${doctor.id}.png`} />
           <h3>
             Doctor:
             {doctor.name}
