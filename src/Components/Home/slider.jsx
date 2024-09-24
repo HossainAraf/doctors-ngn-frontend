@@ -50,6 +50,13 @@ DoctorSlider.propTypes = {
       description: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  doctors: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired, // id must be a number
+      name: PropTypes.string.isRequired, // name must be a string
+      degree: PropTypes.string.isRequired, // degree must be a string
+    }),
+  ).isRequired,
 };
 
 export default DoctorSlider;

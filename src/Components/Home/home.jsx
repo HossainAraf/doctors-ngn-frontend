@@ -1,7 +1,7 @@
 // IMPORT
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchSpecifications, fetchDoctors  } from '../../Services/apiService';
+import { fetchSpecifications, fetchDoctors } from '../../Services/apiService';
 import Button from '../Button';
 import DoctorSlider from './Slider';
 import '../../Styles/home.css';
