@@ -2,6 +2,10 @@
   background-color: #fafaf9;
 }
 
+.slick-slider {
+  width: 95%;
+}
+
 /* SCROLLING TEXT */
 .scroll-text {
   width: 100%;
