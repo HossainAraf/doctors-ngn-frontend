@@ -40,7 +40,7 @@ const DoctorSlider = ({ doctors }) => {
           <div className="flex justify-center">
             <img className="w-32" src={imageMap[doctor.id]} alt={`doctor ${doctor.name}`} />
           </div>
-          <h3>
+          <h3 className="text-indigo1">
             ডাঃ&nbsp;
             {doctor.name}
           </h3>
