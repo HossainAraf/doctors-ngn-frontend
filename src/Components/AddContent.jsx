@@ -9,9 +9,6 @@ const AddContent = () => (
     <Link to="/add-doctor">
       <Button label="Add Doctor" className="flex-auto mx-2 px-2 bg-indigo1 round text-white" />
     </Link>
-    <Link to="#">
-      <Button label="Update Doctors Info" className="flex-auto px-2 bg-indigo1 round text-white" />
-    </Link>
   </div>
 );
 

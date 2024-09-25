@@ -64,5 +64,5 @@ const addDoctor = async (doctor) => {
 
 // EXPORTS
 export {
-  fetchSpecifications, fetchDoctorsBySpecificationId, fetchDoctors, addDoctor
+  fetchSpecifications, fetchDoctorsBySpecificationId, fetchDoctors, addDoctor,
 };
