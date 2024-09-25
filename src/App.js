@@ -9,9 +9,9 @@ import './App.css';
 
 const App = () => (
   <Router>
-    <div className="container">
+    <div className="min-h-screen flex flex-col">
       <Nav />
-      <div className="App">
+      <div className="App flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/add-content" element={<AddContent />} />
