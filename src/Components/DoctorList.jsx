@@ -34,11 +34,17 @@ const DoctorList = () => {
         <ul>
           {doctors.map((doctor) => (
             <li key={doctor.id}>
-              <h3>{doctor.name}</h3>
+              <h3 className="text-orange-900 font-medium">
+                # ডাঃ&nbsp;
+                {doctor.name}
+              </h3>
               <p>{doctor.designation}</p>
-              <p>{doctor.degree}</p>
+              <p className="text-green-900">{doctor.degree}</p>
               <p>{doctor.contact}</p>
-              <p>Contact: 01949403199</p>
+              <span className="flex font-thin">
+                সিরিয়ালের জন্য কল করুনঃ &nbsp;
+                <p className="font-semibold"> 01949-403199</p>
+              </span>
               <p>{doctor.chember}</p>
               <p>{doctor.time}</p>
             </li>
