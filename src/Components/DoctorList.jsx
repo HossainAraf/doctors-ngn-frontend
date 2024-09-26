@@ -26,7 +26,7 @@ const DoctorList = () => {
 
   return (
     <div className="flex flex-col px-3">
-      <h2>
+      <h2 className="my-2 font-semibold text-blue-700">
         {specificationName}
         &nbsp; বিশেষজ্ঞ ডাক্তারগণঃ
       </h2>
