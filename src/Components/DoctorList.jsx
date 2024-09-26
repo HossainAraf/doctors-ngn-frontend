@@ -40,13 +40,14 @@ const DoctorList = () => {
               </h3>
               <p>{doctor.designation}</p>
               <p className="text-green-900">{doctor.degree}</p>
-              <p>{doctor.contact}</p>
+              <p>{doctor.chember}</p>
+              <p>{doctor.time}</p>
               <span className="flex font-thin">
                 সিরিয়ালের জন্য কল করুনঃ &nbsp;
                 <p className="font-semibold"> 01949-403199</p>
               </span>
-              <p>{doctor.chember}</p>
-              <p>{doctor.time}</p>
+              <p className="font-thin text-slate-200">{doctor.contact}</p>
+              <hr className="bg-indigo1 my-2" />
             </li>
           ))}
         </ul>
