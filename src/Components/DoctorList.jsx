@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchDoctorsBySpecificationId, fetchSpecifications } from '../Services/apiService';
+// import Button from './Button';
 
 const DoctorList = () => {
   const { specificationId } = useParams(); // Get the specification ID from the URL
@@ -30,6 +31,13 @@ const DoctorList = () => {
         {specificationName}
         &nbsp; বিশেষজ্ঞ ডাক্তারগণঃ
       </h2>
+      <button
+        className="bg-blue-500 text-white w-48 h-12 fixed bottom-9 right-0"
+        onClick={() => window.location.href = 'tel:01949403199'}
+      >
+        সিরিয়ালের জন্য কল করুনঃ &nbsp; 01949-403199
+      </button>
+
       {doctors.length > 0 ? (
         <ul>
           {doctors.map((doctor) => (
@@ -43,10 +51,8 @@ const DoctorList = () => {
               <p>{doctor.chember}</p>
               <p>{doctor.time}</p>
               <span className="flex font-thin">
-                সিরিয়ালের জন্য কল করুনঃ &nbsp;
-                <p className="font-semibold"> 01949-403199</p>
+                <p className="font-thin text-slate-200">{doctor.contact}</p>
               </span>
-              <p className="font-thin text-slate-200">{doctor.contact}</p>
               <hr className="bg-indigo1 my-2" />
             </li>
           ))}
