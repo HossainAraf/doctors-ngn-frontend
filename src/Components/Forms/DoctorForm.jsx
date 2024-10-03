@@ -92,6 +92,8 @@ const DoctorForm = () => {
             {specifications.map((specification) => (
               <option key={specification.id} value={specification.id}>
                 {specification.name}
+                :  &nbsp;
+                {specification.id}
               </option>
             ))}
           </select>
