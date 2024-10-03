@@ -4,14 +4,14 @@ import { PropTypes } from 'prop-types';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import mamun from '../../Assets/Img/mamun.png';
-import arifur from '../../Assets/Img/arifur.png';
-import mohaimenur from '../../Assets/Img/mohaimenur.png';
+import salemir from '../../Assets/Img/salemir.png';
+import emdadul from '../../Assets/Img/emdadul.png';
 
 // IMAGE MAPPING
 const imageMap = {
   2: mamun,
-  10: arifur,
-  14: mohaimenur,
+  4: salemir,
+  1: emdadul,
 };
 
 const DoctorSlider = ({ doctors }) => {
@@ -27,7 +27,7 @@ const DoctorSlider = ({ doctors }) => {
   };
 
   // FILTER TO GET SPECIFIC DOCTORS
-  const doctorsIdToShow = [2, 10, 14];
+  const doctorsIdToShow = [2, 4, 1];
 
   //  CHECK IF doctor's id IS IN doctorIdToShow ARRAY
   const filterDoctors = doctors.filter((doctor) => doctorsIdToShow.includes(doctor.id)).slice(0, 3);
