@@ -20,24 +20,16 @@ const Feedback = () => {
   return (
     <div className="flex flex-col items-center">
       <h2 className="text-2xl font-bold mb-4">Feedback</h2>
-      <table className="border border-gray-400">
-        <thead>
-          <tr>
-            <th className="border border-gray-400 p-2">Name</th>
-            <th className="border border-gray-400 p-2">Email</th>
-            <th className="border border-gray-400 p-2">Feedback</th>
-          </tr>
-        </thead>
-        <tbody>
-          {feedbacks.map((feedback) => (
-            <tr key={feedback.id}>
-              <td className="border border-gray-400 p-2">{feedback.name}</td>
-              <td className="border border-gray-400 p-2">{feedback.email}</td>
-              <td className="border border-gray-400 p-2">{feedback.feedback}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="w-1/2">
+        {feedbacks.map((feedback) => (
+          <div key={feedback.id} className="bg-white shadow-md p-4 mb-4">
+            <p>{feedback.feedback}</p>
+            <h3 className="text-xl">{feedback.name}</h3>
+            <h4 className="text-lg">{feedback.email}</h4>
+            <h4 className="text-lg">{feedback.phone}</h4>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
