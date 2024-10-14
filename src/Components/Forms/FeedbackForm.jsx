@@ -1,7 +1,7 @@
 // IMPORTS
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { fetchFeedbacks } from '../../Services/apiService';
+import { createFeedback } from '../../Services/apiService';
 
 // COMPONENT
 const FeedbackForm = () => {
@@ -16,7 +16,7 @@ const FeedbackForm = () => {
       name: data.name,
       email: data.email,
     };
-    const response = await fetchFeedbacks(newFeedback);
+    const response = await createFeedback(newFeedback);
     if (response) {
       setFeedbacks([...feedbacks, response]);
     }

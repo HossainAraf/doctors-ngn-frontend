@@ -76,7 +76,28 @@ const fetchFeedbacks = async () => {
   }
 };
 
+// CREATE NEW Feedback
+const createFeedback = async (feedback) => {
+  try {
+    const response = await fetch('http://localhost:3000/api/v1/user_feedbacks/create', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(feedback),
+    });
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status} - ${response.statusText}`);
+    }
+    return await response.json();
+  } catch (error) {
+    // console.error('Error creating feedback:', error);
+    return null;
+  }
+};
+
 // EXPORTS
 export {
-  fetchSpecifications, fetchDoctorsBySpecificationId, fetchDoctors, addDoctor, fetchFeedbacks,
+  fetchSpecifications,
+  fetchDoctorsBySpecificationId, fetchDoctors, addDoctor, fetchFeedbacks, createFeedback,
 };
