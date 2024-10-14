@@ -1,13 +1,8 @@
-// FEEDBACK FORM COMPONENT
-// This component is used to render the feedback form
-// It contains the form fields and the submit button
-// It also contains the form validation logic
-
 // IMPORTS
 import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { fetchFeedbacks } from '../../Services/apiService';
 // import form from tailwindcss
-import { useForm } from 'react-hook-form';
 
 // COMPONENT
 const FeedbackForm = () => {
@@ -76,3 +71,6 @@ const FeedbackForm = () => {
     </div>
   );
 };
+
+// EXPORTS
+export default FeedbackForm;
