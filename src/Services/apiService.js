@@ -65,7 +65,7 @@ const addDoctor = async (doctor) => {
 // FETCH Feedbacks
 const fetchFeedbacks = async () => {
   try {
-    const response = await fetch('http://localhost:3000/api/v1/feedbacks');
+    const response = await fetch('http://localhost:3000/api/v1/user_feedbacks/index');
     if (!response.ok) {
       throw new Error(`Error: ${response.status} - ${response.statusText}`);
     }

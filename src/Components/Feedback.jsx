@@ -1,5 +1,3 @@
-// Fetch all feedbacks from the database and display them in a table
-
 // IMPORTS
 import React, { useState, useEffect } from 'react';
 import { fetchFeedbacks } from '../Services/apiService';
