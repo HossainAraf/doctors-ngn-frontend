@@ -3,7 +3,7 @@ const fetchSpecifications = async () => {
   try {
     // console.log('Sending doctor data:', doctor); // Log the doctor data being sent
 
-    const response = await fetch('https://doctors-ngn.onrender.com/api/v1/specifications');
+    const response = await fetch('http://localhost:3000//api/v1/specifications');
     if (!response.ok) {
       throw new Error(`Error: ${response.status} - ${response.statusText}`);
     }
@@ -18,7 +18,7 @@ const fetchSpecifications = async () => {
 // FETCH DOCTORS BY SPECIFICATION ID
 const fetchDoctorsBySpecificationId = async (specificationId) => {
   try {
-    const response = await fetch(`https://doctors-ngn.onrender.com/api/v1/specifications/${specificationId}/doctors`);
+    const response = await fetch(`http://localhost:3000/api/v1/specifications/${specificationId}/doctors`);
     if (!response.ok) {
       throw new Error(`Error: ${response.status} - ${response.statusText}`);
     }
@@ -37,7 +37,7 @@ const fetchDoctorsBySpecificationId = async (specificationId) => {
 
 // FETCH ALL DOCTORS
 const fetchDoctors = async () => {
-  const response = await fetch('https://doctors-ngn.onrender.com/api/v1/doctors');
+  const response = await fetch('http://localhost:3000/api/v1/doctors');
   const data = await response.json();
   return data;
 };
@@ -45,7 +45,7 @@ const fetchDoctors = async () => {
 // ADD NEW DOCTOR
 const addDoctor = async (doctor) => {
   try {
-    const response = await fetch('https://doctors-ngn.onrender.com/api/v1/doctors', {
+    const response = await fetch('http://localhost:3000/api/v1/doctors', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -62,7 +62,21 @@ const addDoctor = async (doctor) => {
   }
 };
 
+// FETCH Feedbacks
+const fetchFeedbacks = async () => {
+  try {
+    const response = await fetch('http://localhost:3000/api/v1/feedbacks');
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status} - ${response.statusText}`);
+    }
+    return await response.json();
+  } catch (error) {
+    // console.error('Error fetching feedbacks:', error);
+    return [];
+  }
+};
+
 // EXPORTS
 export {
-  fetchSpecifications, fetchDoctorsBySpecificationId, fetchDoctors, addDoctor,
+  fetchSpecifications, fetchDoctorsBySpecificationId, fetchDoctors, addDoctor, fetchFeedbacks,
 };
