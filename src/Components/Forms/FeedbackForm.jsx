@@ -18,6 +18,7 @@ const FeedbackForm = () => {
     const response = await createFeedback(newFeedback);
     if (response) {
       setFeedbacks([...feedbacks, response]);
+      reset();
       setIsSubmitted(true);
       // setTimeout(() => clearForm(), 1000);
     }
