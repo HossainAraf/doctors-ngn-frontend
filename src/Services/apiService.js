@@ -65,7 +65,7 @@ const addDoctor = async (doctor) => {
 // FETCH Feedbacks
 const fetchFeedbacks = async () => {
   try {
-    const response = await fetch('http://localhost:3000/api/v1/user_feedbacks/index');
+    const response = await fetch('http://localhost:3000/api/v1/user_feedbacks');
     if (!response.ok) {
       throw new Error(`Error: ${response.status} - ${response.statusText}`);
     }
@@ -79,7 +79,7 @@ const fetchFeedbacks = async () => {
 // CREATE NEW Feedback
 const createFeedback = async (feedback) => {
   try {
-    const response = await fetch('http://localhost:3000/api/v1/user_feedbacks/create', {
+    const response = await fetch('http://localhost:3000/api/v1/user_feedbacks', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
