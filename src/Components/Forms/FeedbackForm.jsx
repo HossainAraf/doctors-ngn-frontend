@@ -37,7 +37,7 @@ const FeedbackForm = () => {
           <p>Your Feedback Submitted Successfully. Thanks!</p>
           <button
             type="button"
-            className="bg-indigo-500 text-white hover:bg-transparent hover:text-blue-700 p-2 rounded"
+            className="bg-indigo1 text-white hover:bg-transparent hover:text-blue-700 p-1 mb-2 rounded"
             onClick={clearForm}
           >
             CLOSE
@@ -80,7 +80,7 @@ const FeedbackForm = () => {
         {errors.email && (
           <span className="text-red-500 text-sm">Email is required</span>
         )}
-        <button type="submit" className="bg-blue-500 text-white rounded-md p-2">
+        <button type="submit" className="bg-indigo1 text-white rounded-md p-2">
           Submit
         </button>
       </form>
