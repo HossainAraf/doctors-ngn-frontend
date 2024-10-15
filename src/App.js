@@ -5,6 +5,8 @@ import Nav from './Components/Nav/Nav';
 import AddContent from './Components/AddContent';
 import DoctorForm from './Components/Forms/DoctorForm';
 import Footer from './Components/Footer';
+import Feedback from './Components/Feedback';
+import FeedbackForm from './Components/Forms/FeedbackForm';
 import './App.css';
 
 const App = () => (
@@ -23,6 +25,8 @@ const App = () => (
           <Route path="/hospitals" />
           <Route path="/pharmacy" />
           <Route path="/blood-bank" />
+          <Route path="/feedback" element={<Feedback />} />
+          <Route path="/add-feedback" element={<FeedbackForm />} />
           <Route path="/disclaimer" />
           <Route path="/about" />
           <Route path="/contact" />
