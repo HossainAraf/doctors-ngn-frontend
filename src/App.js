@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Components/Home/Home';
+import Ambulance from './Components/Ambulance';
 import DoctorList from './Components/DoctorList';
 import Nav from './Components/Nav/Nav';
 import AddContent from './Components/AddContent';
@@ -16,9 +17,9 @@ const App = () => (
       <div className="App flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/ambulance" element={<Ambulance />} />
           <Route path="/add-content" element={<AddContent />} />
           <Route path="/add-doctor" element={<DoctorForm />} />
-          <Route path="/ambulance" />
           <Route path="/emergency" />
           <Route path="/doctors/:specificationId" element={<DoctorList />} />
           <Route path="/clinics" />
