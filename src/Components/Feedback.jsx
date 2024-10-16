@@ -32,7 +32,7 @@ const Feedback = () => {
           const date = new Date(created_at);
           const localDateTime = date.toLocaleString();
           return (
-            <div key={id}>
+            <div key={id} className="bg-white shadow-md p-4 mb-4">
               <p>{feedback}</p>
               <h3 className="text-xl">{name}</h3>
               <h4 className="text-lg">{email}</h4>
