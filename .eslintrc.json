@@ -24,7 +24,8 @@
   2,
   { "namedComponents": "arrow-function" }
 ],
-"no-alert": "off"
+"no-alert": "off",
+"camelcase": "off"
   },
   "overrides": [
     {

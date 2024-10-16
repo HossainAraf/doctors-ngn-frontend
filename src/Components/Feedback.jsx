@@ -26,14 +26,21 @@ const Feedback = () => {
         <Button label="Add new Feedback" className="bg-transparent hover:bg-indigo1 text-blue-700 font-semibold hover:text-white py-2 px-4 mx-1 my-1 border border-blue-500 hover:border-transparent rounded" />
       </Link>
       <div className="w-1/2">
-        {feedbacks.map((feedback) => (
-          <div key={feedback.id} className="bg-white shadow-md p-4 mb-4">
-            <p>{feedback.feedback}</p>
-            <h3 className="text-xl">{feedback.name}</h3>
-            <h4 className="text-lg">{feedback.email}</h4>
-            <h4 className="text-lg">{feedback.phone}</h4>
-          </div>
-        ))}
+        {feedbacks.map(({
+          id, feedback, name, email, phone, created_at,
+        }) => {
+          const date = new Date(created_at);
+          const localDateTime = date.toLocaleString();
+          return (
+            <div key={id}>
+              <p>{feedback}</p>
+              <h3 className="text-xl">{name}</h3>
+              <h4 className="text-lg">{email}</h4>
+              <h4 className="text-lg">{phone}</h4>
+              <p>{localDateTime}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
