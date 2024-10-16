@@ -65,6 +65,7 @@ const Nav = () => {
           <a href="/blood-bank" className="block text-white hover:text-gray-300 py-2 px-4">ব্লাড ব্যাংক</a>
           <a href="/doctors" className="block text-white hover:text-gray-300 py-2 px-4">ডাক্তার</a>
           <a href="/clinics" className="block text-white hover:text-gray-300 py-2 px-4">ক্লিনিক ও হাসপাতাল</a>
+          <a href="/diagnostics" className="block text-white hover:text-gray-300 py-2 px-4">ডায়াগনস্টিক সেন্টার</a>
           <a href="/pharmacy" className="block text-white hover:text-gray-300 py-2 px-4">ফার্মেসি</a>
           <a href="/feedback" className="block text-white hover:text-gray-300 py-2 px-4">ফিডব্যাক</a>
           <a href="/contact" className="block text-white hover:text-gray-300 py-2 px-4">Contact Us</a>
