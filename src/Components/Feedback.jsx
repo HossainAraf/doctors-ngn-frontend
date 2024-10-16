@@ -31,6 +31,11 @@ const Feedback = () => {
         }) => {
           const date = new Date(created_at);
           const localDateTime = date.toLocaleString();
+        // CHANGE THE DATE FORMAT TO DD/MM/YYYY
+        // Split the date and time
+        const [datePart, timePart] = localDateTime.split(', ');
+        
+
           return (
             <div key={id} className="bg-white shadow-md p-4 mb-4">
               <p>{feedback}</p>
