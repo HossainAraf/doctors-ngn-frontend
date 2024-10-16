@@ -34,6 +34,9 @@ const Feedback = () => {
         // CHANGE THE DATE FORMAT TO DD/MM/YYYY
         // Split the date and time
         const [datePart, timePart] = localDateTime.split(', ');
+        // Change the date format to DD/MM/YYYY
+        const dateParts = datePart.split('/');
+        const formattedDate = `${dateParts[1]}/${dateParts[0]}/${dateParts[2]}`;
         
 
           return (
