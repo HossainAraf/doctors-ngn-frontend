@@ -37,7 +37,8 @@ const Feedback = () => {
         // Change the date format to DD/MM/YYYY
         const dateParts = datePart.split('/');
         const formattedDate = `${dateParts[1]}/${dateParts[0]}/${dateParts[2]}`;
-        
+        // Join the date and time
+        const formattedDateTime = `${formattedDate} ${timePart}`;
 
           return (
             <div key={id} className="bg-white shadow-md p-4 mb-4">
@@ -47,7 +48,7 @@ const Feedback = () => {
               </h3>
               <h4 className="text-green-600">{email}</h4>
               <h4 className="text-green-600">{phone}</h4>
-              <p className="text-green-600">{localDateTime}</p>
+              <p className="text-green-600">{formattedDateTime}</p>
             </div>
           );
         })}
