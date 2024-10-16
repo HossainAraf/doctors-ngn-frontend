@@ -31,14 +31,14 @@ const Feedback = () => {
         }) => {
           const date = new Date(created_at);
           const localDateTime = date.toLocaleString();
-        // CHANGE THE DATE FORMAT TO DD/MM/YYYY
-        // Split the date and time
-        const [datePart, timePart] = localDateTime.split(', ');
-        // Change the date format to DD/MM/YYYY
-        const dateParts = datePart.split('/');
-        const formattedDate = `${dateParts[1]}/${dateParts[0]}/${dateParts[2]}`;
-        // Join the date and time
-        const formattedDateTime = `${formattedDate} ${timePart}`;
+          // CHANGE THE DATE FORMAT TO DD/MM/YYYY
+          // Split the date and time
+          const [datePart, timePart] = localDateTime.split(', ');
+          // Change the date format to DD/MM/YYYY
+          const dateParts = datePart.split('/');
+          const formattedDate = `${dateParts[1]}/${dateParts[0]}/${dateParts[2]}`;
+          // Join the date and time
+          const formattedDateTime = `${formattedDate} ${timePart}`;
 
           return (
             <div key={id} className="bg-white shadow-md p-4 mb-4">
