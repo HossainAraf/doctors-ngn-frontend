@@ -34,10 +34,12 @@ const Feedback = () => {
           return (
             <div key={id} className="bg-white shadow-md p-4 mb-4">
               <p>{feedback}</p>
-              <h3 className="text-xl">{name}</h3>
-              <h4 className="text-lg">{email}</h4>
-              <h4 className="text-lg">{phone}</h4>
-              <p>{localDateTime}</p>
+              <h3 className="text-green-600">
+                {name}
+              </h3>
+              <h4 className="text-green-600">{email}</h4>
+              <h4 className="text-green-600">{phone}</h4>
+              <p className="text-green-600">{localDateTime}</p>
             </div>
           );
         })}
